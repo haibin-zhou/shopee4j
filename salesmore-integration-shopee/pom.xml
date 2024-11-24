@@ -15,8 +15,8 @@
     <packaging>jar</packaging>
 
     <properties>
-        <lombok.version>1.18.2</lombok.version>
-        <testing.version>6.14.3</testing.version>
+        <lombok.version>1.18.30</lombok.version>
+        <testing.version>7.7.0</testing.version>
     </properties>
 
     <dependencies>
@@ -45,4 +45,25 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
+    <build>
+        <finalName>salesmore</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.7.0</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <encoding>UTF-8</encoding>
+                    <compilerArgs>
+                        <arg>--add-opens</arg>
+                        <arg>jdk.compiler/com.sun.tools.javac.processing=ALL-UNNAMED</arg>
+                    </compilerArgs>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
 </project>

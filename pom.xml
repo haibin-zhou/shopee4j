@@ -16,8 +16,6 @@
         <module>salesmore-integration-connectors</module>
         <module>salesmore-integration-core</module>
         <module>salesmore-integration-shopee</module>
-        <module>salesmore-integration-fyndiq</module>
-        <module>salesmore-integration-fyndiq-test</module>
     </modules>
     <properties>
         <release.version>1.0.0</release.version>
@@ -25,7 +23,7 @@
         <log4j.version>2.8.2</log4j.version>
         <jackson.version>2.9.2</jackson.version>
         <maven.jar.plugin.version>3.1.0</maven.jar.plugin.version>
-        <java.version>1.7</java.version>
+        <java.version>11</java.version>
     </properties>
 
     <dependencies>
@@ -82,6 +80,10 @@
                     <source>${java.version}</source>
                     <target>${java.version}</target>
                     <encoding>UTF-8</encoding>
+                    <compilerArgs>
+                        <arg>--add-opens</arg>
+                        <arg>jdk.compiler/com.sun.tools.javac.processing=ALL-UNNAMED</arg>
+                    </compilerArgs>
                 </configuration>
             </plugin>
             <plugin>

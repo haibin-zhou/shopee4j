@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="okhttp" />
+        <module name="salesmore-integration-core" />
+        <module name="salesmore-integration-shopee" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="salesmore-integration-fyndiq" target="1.7" />
+      <module name="salesmore-integration-fyndiq-test" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
